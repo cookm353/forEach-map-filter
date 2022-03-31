@@ -188,9 +188,13 @@ Examples:
 
 // Done!
 function find(arr, searchValue) {
-    return arr.filter(function(number, i) {
-        return number === searchValue && i === arr.indexOf(number)
+    let match = arr.filter(function(number, i) {
+        return number === searchValue
     })
+
+    if (match.length !== 0) {
+        return match[0]
+    } 
 }
 
 /*
